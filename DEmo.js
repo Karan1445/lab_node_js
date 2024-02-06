@@ -1,0 +1,15 @@
+const prime=require('./Prime');
+const palindrome=require('./Pal');
+const Armstrong=require('./Arm');
+const Range=require('./Rng');
+const gcd=require('./gcd');
+const obj=new prime();
+const obj2=new palindrome();
+const obj3=new Armstrong();
+const obj4=new Range();
+const obj5=new gcd();
+console.log("Number is:"+obj.temp(28));
+console.log("Number is:"+obj2.temp(121));
+console.log("Number is:"+obj3.temp(153));
+console.log("Number is:"+obj4.temp(5,50));
+console.log("Number is:"+obj5.temp(12,20));

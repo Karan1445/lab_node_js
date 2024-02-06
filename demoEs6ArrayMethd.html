@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><td><input type="text" id="input"></td>
+            <td><button id="inputbutton" onclick="pushh()">Push</td>
+        </tr>
+        <tr>
+            <td><td><input type="text" id="unshift"></td>
+            <td><button id="unshift" onclick="unshiftt()">unshift</td>
+        </tr>
+        <tr>
+            
+            <td>pop:</td>
+            <td><button onclick="popp()" id="sort" name="sort" value="sort">pop</button></td>
+        </tr>
+        <tr>
+            
+            <td>Sort:</td>
+            <td><button onclick="sort()" id="sort" name="sort" value="sort">Sort</button></td>
+        </tr>
+        <tr>
+            
+            <td>shift:</td>
+            <td><button onclick="shift()" id="sort" name="sort" value="sort">shift</button></td>
+        </tr>
+        <tr>
+            <td><td><input type="text" id="slistart" placeholder="start index" ></td>
+            <td><button id="inputbutton" onclick="spice()">splice</td>
+            </tr>
+            <tr>
+            <td><td><input type="text" id="sliend" placeholder="end index" ></td>
+            
+                <td><button id="inputbutton" onclick="slice()">slice</td>
+        </tr>
+        <tr><td></td>
+            <td><input type="text" id="incval" placeholder="inclued" ></td>
+            <td><button onclick="include()" id="sort" name="sort" value="sort">includes</button></td>
+            <td><button onclick="filter()" id="sort" name="sort" value="sort">filter</button></td>
+            
+        </tr>
+       
+            
+           
+            
+      
+        </table>
+        <p id="print">
+            
+        </p>
+    <script>
+        let arr=[];
+        function sort(){
+            arr.sort();
+           document.getElementById("print").innerHTML=arr;
+        }
+        function pushh(){
+            var data=document.getElementById("input").value;
+            document.getElementById("input").value=" ";
+            arr.push(data);
+          
+            document.getElementById("print").innerHTML=arr;
+        }
+        function popp(){
+            arr.pop();
+            document.getElementById("print").innerHTML=arr;
+        }
+        function unshiftt(){
+            var data=document.getElementById("unshift").value;
+            document.getElementById("unshift").value=" ";
+            arr.unshift(data);
+            document.getElementById("print").innerHTML=arr;
+        }
+        function shift(){
+            arr.shift();
+            document.getElementById("print").innerHTML=arr;
+        }
+        function spice(){
+          
+            arr.splice(document.getElementById("slistart").value,document.getElementById("sliend").value);
+            document.getElementById("print").innerHTML=arr;
+        }
+        function slice(){
+            brr=arr.slice(document.getElementById("slistart").value,document.getElementById("sliend").value);
+            document.getElementById("print").innerHTML=brr;
+        }
+        function include(){
+            x=arr.includes(document.getElementById("incval").value);
+            document.getElementById("print").innerHTML=x;
+        }
+        function filter(){
+            x=arr.filter((check)=>check===document.getElementById("incval").value);
+            document.getElementById("print").innerHTML=x;
+        }
+    </script>
+</body>
+</html>
